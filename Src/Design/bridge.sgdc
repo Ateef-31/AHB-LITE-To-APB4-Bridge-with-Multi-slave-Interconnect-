@@ -1,0 +1,36 @@
+current_design "ahb2apb_bridge"
+
+clock -name hclk -domain d1 -period 10 -tag CLOCK_DOMAIN_1 -edge {0 5}
+clock -name pclk -domain d2 -period 40 -tag CLOCK_DOMAIN_2 -edge {0 20}
+
+reset -name hresetn -value 0
+reset -name presetn -value 0
+
+
+#reset -name async_rstn -value 0
+
+#reset -name hresetn_sync -value 0
+#reset -name presetn_sync -value 0
+
+num_flops -reset -to_domain d1 -value 4
+num_flops -reset -to_domain d2 -value 4
+
+input -name hsel -clock hclk
+input -name haddr -clock hclk
+input -name htrans -clock hclk
+input -name hwrite -clock hclk
+input -name hsize -clock hclk
+input -name hwdata -clock hclk
+output -name hrdata -clock hclk
+output -name hreadyout -clock hclk
+output -name hresp -clock hclk
+
+input -name prdata_bus -clock pclk
+input -name pready_bus -clock pclk
+input -name pslverr_bus -clock pclk
+output -name psel -clock pclk
+output -name penable -clock pclk
+output -name paddr -clock pclk
+output -name pwrite -clock pclk
+output -name pwdata -clock pclk
+output -name pstrb -clock pclk
