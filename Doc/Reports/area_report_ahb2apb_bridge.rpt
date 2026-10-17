@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : ahb2apb_bridge
+Version: S-2021.06-SP4
+Date   : Sat Oct 17 22:31:15 2026
+****************************************
+
+Library(s) Used:
+
+    saed32hvt_ss0p75v25c (File: /fetools/work_area/frontend/SAED32_EDK/lib/stdcell_hvt/db_nldm/saed32hvt_ss0p75v25c.db)
+
+Number of ports:                          460
+Number of nets:                          1547
+Number of cells:                         1184
+Number of combinational cells:            722
+Number of sequential cells:               457
+Number of macros/black boxes:               0
+Number of buf/inv:                         51
+Number of references:                      27
+
+Combinational area:               1794.002506
+Buf/Inv area:                       76.243201
+Noncombinational area:            3252.026680
+Macro/Black Box area:                0.000000
+Net Interconnect area:            1739.312398
+
+Total cell area:                  5046.029187
+Total area:                       6785.341585
+1
